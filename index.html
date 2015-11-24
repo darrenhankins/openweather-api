@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+<meta charset="UTF-8">
+<title>Geo Location</title>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script type="application/javascript" >
+
+//Check if browser supports W3C Geolocation API
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+} else {
+    alert('It appears that Geolocation, which is required for this web page application, is not enabled in your browser. Please use a browser which supports the Geolocation API.');
+}
+
+function successFunction(position) {
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+    window.location.href = "weather.php?lat="+lat+"&lon="+lon;
+    // document.getElementById("demo").innerHTML = 'Latitude:'+lat+' Longitude: '+lon;
+    // alert('Your location coordinates are: Latitude:'+lat+' Longitude: '+lon);
+}
+
+function errorFunction(position) {
+    alert('Error!');
+}
+
+</script>
+
+
+</body>
+</html
+
+
+
+
+
+    
+
