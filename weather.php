@@ -1,6 +1,6 @@
 <?php
 
-include('config/config.inc');
+include('config/config.ini');
 include('include.php');
 
 ?>
